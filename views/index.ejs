@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=  %></title>
+
+    <!-- Css Section-->
+    <link rel='stylesheet' href="Assig.css" />
+    <link rel='stylesheet' href="style.css" />
+    <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel='stylesheet' href="/@fortawesome/fontawesome-free/css/all.min.css" />
+  </head>
+  <body>
+   
+
+<% include partials/header.ejs %>
+<% include partials/content.ejs %>
+
+    
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+
+           <% if (title == "Home") { %>
+            <li class="nav-item active">
+              <%} else { %>
+              <li class="nav-item">
+                <%} %>
+          
+                
+           <% if (title == "Home") { %>
+            <li class="nav-item active">
+              <%} else { %>
+              <li class="nav-item">
+                <%} %>
+          
+             
+           <% if (title == "About Me") { %>
+            <li class="nav-item active">
+              <%} else { %>
+              <li class="nav-item">
+                <%} %>
+
+                
+           <% if (title == "Projects") { %>
+            <li class="nav-item active">
+              <%} else { %>
+              <li class="nav-item">
+                <%} %>
+          
+
+                
+           <% if (title == "Services") { %>
+            <li class="nav-item active">
+              <%} else { %>
+              <li class="nav-item">
+                <%} %>
+          
+          
+
+            <li class="nav-item">
+              <a class="nav-link "  href="/index">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link "  href="/about">About Me</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"  href="/projects">Projects</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link "  href="/services">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Me</a>
+            </li>         
+        </div>
+      </div>
+    </nav>
+            <!-- Main content--->
+           <main class="Container">
+      <div class="jumbotron">
+        <h1 class="display-4"> Welcome to the <%= title%> </h1>
+      </div>
+    </main>
+
+    <% include partials/footer.ejs %>
+    <% include partials/bottom_nav.ejs %>
+
+    <footer>
+          <nav class="navbar fixed-bottom navbar-light bg-light">
+            <h6 class="display-10 navbar-text" > &copy; CopyRight 2022. All Rights Reserved.</h6>
+          </nav>
+
+    </footer>
+             <!--Script Sction-->
+           <script src="app.js"></script>
+           <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+           <script src="/jquery/dist/jquery.min.js"></script>
+  </body>
+</html>
